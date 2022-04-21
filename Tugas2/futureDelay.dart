@@ -1,15 +1,13 @@
 import 'dart:async';
 void main(List<String> args) {
-var namaDepan = "Seva";
-var namaTengah = "Giantama";
-var namaBelakang = "Farel";
-var namaLengkap = "$namaDepan $namaTengah $namaBelakang";
+var namaDepan = "Nama";
+var namaTengah = "Seva";
+var namaBelakang = "saya";
 print("$namaDepan");
-print("$namaTengah");
 print("$namaBelakang");
-fetchData(namaLengkap);
+fetchData(namaTengah);
+}
+Future<void> fetchData(var namaTengah){
+return Future.delayed(Duration(seconds: 2), () => print("$namaTengah"));
 }
 
-Future<void> fetchData(var namaLengkap){
-return Future.delayed(Duration(seconds: 2), () => print("$namaLengkap"));
-}
